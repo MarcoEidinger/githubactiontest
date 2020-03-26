@@ -1,0 +1,15 @@
+import Something
+
+public class Yoo() {
+	func one() {
+
+	}
+
+	func two() {
+
+	}
+
+	func three() {
+
+	}
+}
