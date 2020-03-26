@@ -16,4 +16,8 @@ public class Yoo() {
 	private func four() {
 
 	}
+
+	public func five() {
+
+	}
 }
