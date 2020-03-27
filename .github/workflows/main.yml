@@ -4,7 +4,7 @@ jobs:
   add-reviews:
     runs-on: ubuntu-latest
     steps:
-      - uses: MarcoEidinger/typescript-action@v9
+      - uses: MarcoEidinger/typescript-action@v10
         with:
           repo-token: "${{ secrets.GITHUB_TOKEN }}"
           configuration-path: ".github/auto-assign.yml"
