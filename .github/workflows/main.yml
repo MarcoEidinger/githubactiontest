@@ -1,11 +1,10 @@
-name: 'Auto Assign'
 on: pull_request
 
 jobs:
   add-reviews:
     runs-on: ubuntu-latest
     steps:
-      - uses: MarcoEidinger/typescript-action@v2
+      - uses: MarcoEidinger/typescript-action@v3
         with:
           repo-token: "${{ secrets.GITHUB_TOKEN }}"
           configuration-path: ".github/auto-assign.yml"
