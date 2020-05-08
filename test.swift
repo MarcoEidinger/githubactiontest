@@ -1,5 +1,5 @@
 class test() {
-	public func testMe() {
+	public func testMe(_ new: String) {
 		print("test3")
 	}
 }
