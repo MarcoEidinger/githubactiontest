@@ -1,9 +1,9 @@
-name: 'Auto-Assign-API-Changes'
+name: 'Watch-API-Changes'
 
 on: pull_request
 
 jobs:
-  add-reviews:
+  check-and-auto-assign-reviewer:
     runs-on: ubuntu-latest
     steps:
       - uses: MarcoEidinger/typescript-action@v16
