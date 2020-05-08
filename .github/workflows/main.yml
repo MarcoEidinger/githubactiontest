@@ -4,7 +4,7 @@ jobs:
   add-reviews:
     runs-on: ubuntu-latest
     steps:
-      - uses: MarcoEidinger/typescript-action@v15
+      - uses: MarcoEidinger/typescript-action@v16
         with:
           repo-token: "${{ secrets.GITHUB_TOKEN }}"
-          configuration-path: ".github/auto-assign.yml"
+          configuration-path: ".github/auto_assign_when_swift_api_changes.yml"
