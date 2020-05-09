@@ -16,7 +16,7 @@ jobs:
         env:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
 
-  check-and-auto-assign-reviewer:
+  auto-assign-reviewer:
     runs-on: ubuntu-latest
     steps:
       - uses: MarcoEidinger/swift-api-assign-reviewer@v1
