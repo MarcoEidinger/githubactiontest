@@ -6,7 +6,7 @@ jobs:
   check-and-auto-assign-reviewer:
     runs-on: ubuntu-latest
     steps:
-      - uses: MarcoEidinger/typescript-action@v16
+      - uses: MarcoEidinger/swift-api-assign-reviewer@v17
         with:
           repo-token: "${{ secrets.GITHUB_TOKEN }}"
-          configuration-path: ".github/auto_assign_when_swift_api_changes.yml"
+          configuration-path: ".github/swift-api-assign-reviewer.yml"
