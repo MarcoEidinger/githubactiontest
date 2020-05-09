@@ -1,25 +1,15 @@
-name: Watch-API-Changes
+name: API-Protection
 
 on:
   pull_request:
     types: [opened, synchronize]
 
 jobs:
-  buildAndCheckAPIBreakage:
-    runs-on: ubuntu-latest
-    steps:
-      - uses: actions/checkout@v2
-        with:
-          ref: master
-          fetch-depth: 0
-      - uses: ltetzlaff/swift-api-diff@master
-        env:
-          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
 
-  auto-assign-reviewer:
+  assign-reviewer:
     runs-on: ubuntu-latest
     steps:
-      - uses: MarcoEidinger/swift-api-assign-reviewer@v1
+      - uses: MarcoEidinger/swift-api-assign-reviewer@1.0.0
         with:
           repo-token: "${{ secrets.GITHUB_TOKEN }}"
           configuration-path: ".github/swift-api-assign-reviewer.yml"
