@@ -1,10 +1,15 @@
-on: pull_request
+name: API-Protection
+
+on:
+  pull_request:
+    types: [opened, synchronize]
 
 jobs:
-  add-reviews:
+
+  assign-reviewer:
     runs-on: ubuntu-latest
     steps:
-      - uses: MarcoEidinger/typescript-action@v15
+      - uses: MarcoEidinger/swift-api-assign-reviewer@1.0.0
         with:
           repo-token: "${{ secrets.GITHUB_TOKEN }}"
-          configuration-path: ".github/auto-assign.yml"
+          configuration-path: ".github/swift-api-assign-reviewer.yml"
